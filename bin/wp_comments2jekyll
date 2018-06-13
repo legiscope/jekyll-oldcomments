@@ -33,7 +33,7 @@ XPath.each(xml,'//item') do |item|
       fd.write("---\n")
       c_map.each do |key, value| 
         if key != 'comment_content'
-          fd.write("%s: %s\n" % [key.gsub(/comment_/,''), value])
+          fd.write("%s: \"%s\"\n" % [key.gsub(/comment_/,''), value])
         end
       end
       fd.write("---\n")
